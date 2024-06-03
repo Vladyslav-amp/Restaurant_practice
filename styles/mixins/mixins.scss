@@ -1,0 +1,53 @@
+//Thanks to use this mixin we can set different hover style to different element using only (@include hover(color, blue))
+// @mixin hover($_property, $_toValue) {
+//   transition: #{$_property} 0.3s;
+
+//   &:hover {
+//     #{$_property}: $_toValue;
+//   }
+// }
+
+// mixin for responsive
+@mixin onHuge {
+  @media (min-width:$huge-min-width) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width:$desktop-min-width) {
+    @content;
+  }
+}
+
+@mixin onTablet {
+  @media (min-width:$tablet-min-width) {
+    @content;
+  }
+}
+
+// mixin for max width
+@mixin maxContentWidth() {
+  max-width: 355px;
+
+  @include onTablet {
+    max-width: 640px;
+  }
+
+  @include onDesktop {
+    max-width: 1440px;
+  }
+}
+
+// mixin for padding inline
+@mixin paddingInline() {
+  padding-inline: 10px;
+
+  @include onTablet {
+    padding-inline: 50px;
+  }
+
+  @include onDesktop {
+    padding-inline: 100px;
+  }
+}

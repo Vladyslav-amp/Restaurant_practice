@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+}
+
+.main {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-image: url("../../image/main.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+
+  &-icon {
+    &__tomato-big {
+      position: absolute;
+      top: -55px;
+      display: none;
+      z-index: -1;
+
+      @include onDesktop {
+        display: block;
+      }
+    }
+
+    &__basil-big {
+      position: absolute;
+      right: 0;
+      top: 295px;
+      display: none;
+      z-index: -1;
+
+
+      @include onDesktop {
+        display: block;
+      }
+    }
+
+    &__onion-big {
+      position: absolute;
+      top: 736px;
+      left: 48px;
+      z-index: -1;
+      display: none;
+
+      @include onDesktop {
+        display: block;
+      }
+    }
+
+    &__basilMid-big {
+      position: absolute;
+      top: 1600px;
+      left: 0;
+      z-index: -1;
+      display: none;
+
+      @include onDesktop {
+        display: block;
+      }
+    }
+
+    &__tomatoBottom-big {
+      position: absolute;
+      top: 2380px;
+      left: 26px;
+      z-index: -1;
+      display: none;
+
+      @include onDesktop {
+        display: block;
+      }
+    }
+
+    &__basilBottom-big {
+      position: absolute;
+      right: 0;
+      top: 2330px;
+      z-index: -1;
+      display: none;
+
+      @include onDesktop {
+        display: block;
+      }
+    }
+
+    &__tomato-small {
+      position: absolute;
+      top: -110px;
+      left: 0;
+      z-index: -1;
+
+      @include onDesktop {
+        display: none;
+      }
+    }
+
+    &__basil-small {
+      position: absolute;
+      top: 950px;
+      right: 0;
+      z-index: -1;
+
+      @include onDesktop {
+        display: none;
+      }
+    }
+
+    &__tomatoBottom-small {
+      position: absolute;
+      top: 4820px;
+      left: 0;
+      z-index: -1;
+
+      @include onTablet {
+        top: 3450px;
+      }
+
+      @include onDesktop {
+        display: none;
+      }
+    }
+
+    &__basilBottom-small {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+
+      @include onTablet {
+        display: none;
+      }
+    }
+  }
+}

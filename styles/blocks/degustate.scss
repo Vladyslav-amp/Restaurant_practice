@@ -1,0 +1,223 @@
+.degustate {
+  @include paddingInline;
+
+  position: relative;
+  margin-inline: auto;
+
+  &-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__br {
+    display: none;
+
+    @include onTablet {
+      display: block;
+    }
+  }
+
+  &__title {
+    padding-block-start: 50px;
+    text-align: center;
+
+    &-head {
+      color: #FFF;
+      font-family: "Noto Sans";
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+
+      @include onTablet {
+        font-size: 38px;
+      }
+
+      @include onDesktop {
+        font-size: 48px;
+      }
+    }
+
+    &-text {
+      padding-block: 30px 60px;
+      color: #FFF;
+      text-align: center;
+      font-family: "Noto Sans";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include onTablet {
+      grid-template-columns: repeat(2, 1fr);
+      -webkit-column-gap: 50px;
+      -moz-column-gap: 50px;
+      -o-column-gap: 50px;
+      column-gap: 30px;
+      -webkit-row-gap: 40px;
+      -moz-row-gap: 40px;
+      -o-row-gap: 40px;
+      row-gap: 40px;
+    }
+
+    @include onDesktop {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 60px;
+    }
+  }
+
+  &-card {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 300px;
+    padding-block-start: 30px;
+
+    &--background {
+      position: relative;
+
+      &-icon {
+        position: absolute;
+        object-fit: cover;
+        z-index: -1;
+        height: 100%;
+        width: 204px;
+        top: 50px;
+        right: -35px;
+      }
+    }
+
+    &__image {
+      position: relative;
+
+      &-block {
+        height: 300px;
+      }
+
+      &--1 {
+        position: relative;
+        background-image: url("../../image/dishes/dishes_1.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 145%;
+        min-width: 100%;
+        height: 100%;
+        border-radius: 50%;
+
+        &--background {
+          position: absolute;
+          top: -50px;
+          right: -40px;
+          height: 260px;
+          z-index: -1;
+
+          @include onDesktop {
+            left: -80px;
+          }
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &--2 {
+        background-image: url("../../image/dishes/dishes_2.png");
+        height: 100%;
+        width: 96%;
+        background-size: cover;
+        border-radius: 50%;
+      }
+
+      &--3 {
+        background-image: url("../../image/dishes/dishes_3.png");
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        border-radius: 50%;
+      }
+    }
+
+    &__description {
+      color: #FFF;
+      text-align: center;
+      font-family: "Noto Sans";
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
+
+  &__button {
+    padding-block-start: 60px;
+    display: flex;
+    justify-content: center;
+    display: none;
+
+    @include onTablet {
+      display: flex;
+    }
+
+    &-block {
+      padding: 21px 49px 20px;
+      color: #FFF;
+      font-family: "Noto Sans";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+      border-radius: 5px;
+      text-transform: uppercase;
+      border: none;
+      background: #CD6363;
+      cursor: pointer;
+      transition: all .5s;
+      position: relative;
+      overflow: hidden;
+      z-index: 0;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #1ad458;
+        z-index: -2;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: darken(#1ad458, 15%);
+        transition: all .5s;
+        z-index: -1;
+      }
+
+      &:hover {
+        color: #fff;
+
+        &:before {
+          width: 100%;
+        }
+      }
+
+      &:active {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

@@ -1,0 +1,329 @@
+.menu {
+  @include paddingInline;
+  margin-inline: auto;
+
+  &-block {
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &-top {
+    &__title {
+      padding-block-start: 60px;
+
+      &-head {
+        color: #FFF;
+        font-family: "Noto Sans";
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        text-align: center;
+      }
+
+      &-text {
+        padding-block: 30px;
+        color: #FFF;
+        text-align: center;
+        font-family: "Noto Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+      }
+    }
+  }
+
+  &-body {
+
+    &__list {
+      @include paddingInline;
+
+      display: grid;
+      grid-template-columns: repeat(1, minmax(300px, 450px));
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      @include onTablet {
+        grid-template-columns: repeat(2, minmax(300px, 450px));
+      }
+      
+      @include onDesktop {
+        display: grid;
+        grid-template-rows: auto;
+      }
+
+      &-item {
+        height: 300px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        opacity: .8;
+
+        @include onDesktop {
+          flex-direction: column-reverse;
+          height: 508px;
+        }
+
+        &--1 {
+          background-image: url("../../image/category/category_1.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+
+        &--2 {
+          background-image: url("../../image/category/category_2.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center 75%;
+        }
+
+        &--3 {
+          background-image: url("../../image/category/category_3.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+
+        &--4 {
+          background-image: url("../../image/category/category_4.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center 20%;
+        }
+
+        &--5 {
+          background-image: url("../../image/category/category_5.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+
+        &--6 {
+          background-image: url("../../image/category/category_6.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+
+        &--7 {
+          background-image: url("../../image/category/category_7.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+      }
+
+      &-head {
+        color: #FFF;
+        font-family: "Noto Sans";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+      }
+
+      &-button {
+        padding: 21px 55px 20px;
+        color: #FFF;
+        font-family: "Noto Sans";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        text-transform: uppercase;
+        border-radius: 5px;
+        border: 2px solid rgba(255, 255, 255, 0.60);
+        background: rgba(0, 0, 0, 0.65);
+        cursor: pointer;
+
+        &:hover {
+          opacity: .8;
+          border: 2px solid rgba(255, 255, 255, 0.4);
+          transition: all .8s;
+        }
+      }
+    }
+
+  }
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close:hover,
+.close:focus {
+  color: #ff5b5b;
+}
+
+.coldAppetizers {
+  @include paddingInline;
+
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  &__container {
+  max-width: 1440px;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 100%;
+    z-index: 999;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+
+    @include onTablet {
+      padding: 30px;
+    }
+  }
+
+  &-body {
+
+    &__content {
+      display: grid;
+      grid-template-columns: 1fr;
+
+      @include onTablet {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 30px;
+      }
+    }
+    
+    &__image {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      justify-content: center;
+
+      @include onDesktop {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      &-set {
+        max-height: 300px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      &-property {
+        height: 100%;
+      }
+    }
+
+    &__title {
+      text-align: center;
+      padding-block: 30px;
+
+      @include onDesktop {
+        padding-block-end: 34px;
+      }
+
+      &-head {
+        color: #000;
+        font-family: "Noto Sans";
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+      }
+    }
+
+    &__card {
+      padding-block-start: 20px;
+      &-title {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &-head {
+        color: #000;
+        font-family: "Noto Sans";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+      }
+
+      &-price {
+        color: #000;
+        font-family: "Noto Sans";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+      }
+
+      &-subtitle {
+        display: flex;
+        padding-block-start: 10px;
+      }
+
+      &-weight {
+        padding-inline-end: 26px;
+      }
+
+      &-weight,
+      &-batch {
+        color: #000;
+        font-family: "Noto Sans";
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+      }
+
+      &-body {
+        padding-block: 5px 20px;
+      }
+
+      &-recipe {
+        color: #000;
+        font-family: "Noto Sans";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+      }
+
+      &-line {
+        background: #C4C4C4;
+        height: 1px;
+        border: 1px;
+      }
+    }
+
+    &__bottom {
+      padding-block-start: 30px;
+    }
+  }
+
+}
+
+.coldAppetizers::-webkit-scrollbar {
+  width: 0;
+}

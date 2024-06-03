@@ -1,0 +1,176 @@
+.menu-gallery {
+  max-width: 1440px;
+  margin-inline: auto;
+  display: none;
+
+  @include onDesktop {
+    display: block;
+  }
+
+  &__top {
+    padding-block: 157px 63px;
+
+    &-head {
+      color: #FFF;
+      font-family: "Noto Sans";
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 70px;
+      text-align: center;
+    }
+
+    &-text {
+      padding-block-start: 25px;
+      color: #FFF;
+      text-align: center;
+      font-family: "Noto Sans";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  &__carousel {
+    position: relative;
+  }
+
+  &__slider {
+    position: relative;
+
+    &-block {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &-head {
+      position: absolute;
+      bottom: -10px;
+      color: #FFF;
+      font-family: "Noto Sans";
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 70px;
+    }
+
+    &-button {
+      position: relative;
+      opacity: 0;
+      top: 224px;
+      padding: 21px 55px 20px 55px;
+      color: #FFF;
+      font-family: "Noto Sans";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+      text-transform: uppercase;
+      border-radius: 5px;
+      border: 2px solid rgba(255, 255, 255, 0.60);
+      background: rgba(0, 0, 0, 0.65);
+
+      &:hover {
+        opacity: .8;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        transition: all .8s;
+      }
+    }
+
+    &-slide {
+      height: 508px;
+      width: 287px;
+
+      &:hover .menu-gallery__slider-button {
+        opacity: 1;
+        transition: ease-in-out .8s;
+      }
+
+      &-1 {
+        background-image: url("../../image/category/category_1.png");
+        background-repeat: no-repeat;
+        background-position: 5%;
+        background-size: cover;
+      }
+
+      &-2 {
+        background-image: url("../../image/category/category_2.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      &-3 {
+        background-image: url("../../image/category/category_3.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      &-4 {
+        background-image: url("../../image/category/category_4.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      &-5 {
+        background-image: url("../../image/category/category_5.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      &-6 {
+        background-image: url("../../image/category/category_6.png");
+        background-repeat: no-repeat;
+        background-position: center left 65%;
+        background-size: cover;
+      }
+
+      &-7 {
+        background-image: url("../../image/category/category_7.png");
+        background-repeat: no-repeat;
+        background-position: center right 50%;
+        background-size: cover;
+      }
+    }
+  }
+}
+
+.slick-slide {
+  margin-right: 5px;
+}
+
+.custom-prev,
+.custom-next {
+  position: absolute;
+  top: 45%;
+  transform: translateY(50%);
+  z-index: 1;
+}
+
+.custom-prev {
+  background: none;
+  border: none;
+  left: 100px;
+
+  &__icon-prev {
+    height: 40px;
+    width: 40px;
+    transform: rotate(180deg);
+  }
+}
+
+.custom-next {
+  background: none;
+  border: none;
+  right: 100px;
+
+  &__icon-next {
+    height: 40px;
+    width: 40px;
+  }
+}

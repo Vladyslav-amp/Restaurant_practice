@@ -1,0 +1,170 @@
+.footer {
+  @include paddingInline;
+
+  background-color: #000;
+  padding-block-start: 35px;
+
+  &-hr {
+    display: none;
+
+    @include onDesktop {
+      display: block;
+      border: 1px solid #393939;
+      height: 70px;
+      -webkit-border: 1px;
+      -moz-border: 1px;
+      -o-border: 1px;
+    }
+  }
+
+  &-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include onTablet {
+      flex-direction: column;
+      gap: 10px;
+      justify-content: space-between;
+    }
+
+    @include onDesktop {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-block-end: 35px;
+    }
+  }
+
+  &-contacts {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding-block-start: 5px;
+
+    @include onDesktop {
+      padding-block-start: 0;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+    }
+
+    &__phone {
+      color: #FFF;
+      font-family: Montserrat;
+      font-size: 21px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-decoration: none;
+    }
+
+    &__social {
+      display: flex;
+      justify-content: center;
+      gap: 11px;
+
+      @include onTablet {
+        padding-block-start: 0;
+      }
+
+      &__link {
+        list-style: none;
+        text-decoration: none;
+      }
+
+      &-image {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  &-mail {
+    padding-block-start: 14px;
+    position: relative;
+
+    @include onTablet {
+      padding-block-start: 0;
+      order: 4;
+    }
+
+    &__link {
+      text-decoration: none;
+      color: #FFF;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  &-adress {
+    padding-block-start: 27.5px;
+
+    @include onTablet {
+      padding-block-start: 0;
+    }
+
+    &__locate {
+      color: #FFF;
+      text-align: center;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration: none;
+    }
+  }
+
+  &-privacy {
+    padding-block: 32.5px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+
+    @include onTablet {
+      padding-block-start: 30px;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 0;
+    }
+
+    &__terms {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+
+      @include onTablet {
+        flex-direction: row;
+        gap: 30px;
+      }
+    }
+
+    &__text {
+      color: #E0E0E0;
+      font-family: Montserrat;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-align: center;
+
+      &-link {
+        text-decoration: none;
+        color: #E0E0E0;
+        font-family: Montserrat;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      &-copyright {
+        padding-inline-end: 20px;
+      }
+    }
+  }
+}

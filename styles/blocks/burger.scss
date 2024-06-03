@@ -1,0 +1,87 @@
+.burger-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  padding-inline: 10px;
+  padding-block-start: 10px;
+  background-image: url("../../image/main.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  opacity: 0;
+  transition: all .5s;
+  transform: translateX(-100%);
+  pointer-events: none;
+
+  &:target {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: all;
+  }
+
+  @include onTablet {
+    padding-inline: 50px;
+  }
+
+  @include onDesktop {
+    display: none;
+  }
+
+
+  &__block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__icon {
+    &-close {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__nav {
+    padding-block-start: 50px;
+  }
+
+  &__navigation {
+    &-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-item {
+      list-style: none;
+    }
+
+    &-link {
+      color: #FFF;
+      text-align: center;
+      font-family: "Noto Sans";
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 40px;
+      text-decoration: none;
+
+      &:hover {
+        color: #1ad458;
+      }
+    }
+  }
+
+  // Cross browser
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  -ms-transition: all .5s;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+}
