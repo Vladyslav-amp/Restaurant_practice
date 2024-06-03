@@ -79,7 +79,7 @@
 .header-block {
   padding-inline: 10px;
   padding-inline: 10px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url("../../image/head.png"), lightgray -222.105px 0px/429.603% 100% no-repeat;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url("../image/head.png"), lightgray -222.105px 0px/429.603% 100% no-repeat;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 80%;
@@ -367,7 +367,7 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   height: 100%;
   width: 100%;
-  background-image: url("../../image/main.png");
+  background-image: url("../image/main.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
