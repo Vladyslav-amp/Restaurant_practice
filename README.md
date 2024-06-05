@@ -1,1 +1,1 @@
-DEMO[ https://vladyslav-amp.github.io/Restaurant_practice/]
+[DEMO]( https://vladyslav-amp.github.io/Restaurant_practice/)
